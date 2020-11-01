@@ -1,9 +1,21 @@
-import * as S from './styles'
+import * as S from './Main.styles'
+
+export interface MainProps {
+  /**
+   * Optional title
+   */
+  title?: string
+
+  /**
+   * Optional description
+   */
+  description?: string
+}
 
 const Main = ({
   title = 'NextJS Boilerplate',
   description = 'TypeScript, ReactJS, NextJS e Styled Components'
-}) => (
+}: MainProps) => (
   <S.Wrapper>
     <S.Logo
       src="/img/logo.svg"
