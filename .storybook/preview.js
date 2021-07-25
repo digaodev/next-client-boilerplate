@@ -1,7 +1,11 @@
+import { RouterContext } from 'next/dist/next-server/lib/router-context'
+
 import GlobalStyles from '../src/styles/global'
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  nextRouter: {
+    Provider: RouterContext.Provider
+  }
 }
 
 export const decorators = [
